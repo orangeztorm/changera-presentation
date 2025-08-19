@@ -1,0 +1,124 @@
+.phone-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: transform var(--transition-normal);
+}
+
+.phone-container:hover {
+  transform: translateY(-8px);
+}
+
+.phone-frame {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border-radius: 30px;
+  padding: 8px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 2px solid #333;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 25px;
+  background: #000;
+  border-radius: 0 0 15px 15px;
+  z-index: 2;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+.phone-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 22px;
+}
+
+.phone-home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.phone-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0;
+}
+
+.phone-description {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0;
+  max-width: 180px;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .phone-frame {
+    width: 160px;
+    height: 320px;
+  }
+  
+  .phone-notch {
+    width: 100px;
+    height: 20px;
+  }
+  
+  .phone-home-indicator {
+    width: 100px;
+  }
+  
+  .phone-title {
+    font-size: var(--font-size-base);
+  }
+  
+  .phone-description {
+    font-size: var(--font-size-xs);
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-frame {
+    width: 140px;
+    height: 280px;
+  }
+  
+  .phone-notch {
+    width: 80px;
+    height: 18px;
+  }
+  
+  .phone-home-indicator {
+    width: 80px;
+  }
+}
