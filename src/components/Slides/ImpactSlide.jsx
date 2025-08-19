@@ -68,7 +68,10 @@ const ImpactSlide = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-5"
-          style={{ color: 'white' }}
+          style={{ 
+            color: 'white',
+            textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)'
+          }}
         >
           Impact & Achievements
         </motion.h2>
@@ -102,13 +105,18 @@ const ImpactSlide = () => {
                 <metric.icon size={36} color="white" />
               </div>
 
-              <h3 style={{ marginBottom: 'var(--spacing-sm)' }}>{metric.label}</h3>
+              <h3 style={{ 
+                marginBottom: 'var(--spacing-sm)',
+                color: 'white',
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
+              }}>{metric.label}</h3>
 
               <div style={{
                 fontSize: 'var(--font-size-4xl)',
                 fontWeight: 'bold',
                 marginBottom: 'var(--spacing-sm)',
-                color: metric.color
+                color: metric.color,
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
               }}>
                 <AnimatedCounter
                   end={parseInt(metric.value)}
@@ -119,7 +127,9 @@ const ImpactSlide = () => {
 
               <p style={{
                 fontSize: 'var(--font-size-sm)',
-                opacity: 0.9
+                color: 'rgba(255, 255, 255, 0.9)',
+                opacity: 1,
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)'
               }}>
                 {metric.description}
               </p>
@@ -145,17 +155,20 @@ const ImpactSlide = () => {
           }}
         >
           <h3 style={{
-            color: 'white',
+            color: '#ffffff',
             marginBottom: 'var(--spacing-lg)',
-            fontSize: 'var(--font-size-2xl)'
+            fontSize: 'var(--font-size-2xl)',
+            textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
           }}>
             🎉 Transformation Complete
           </h3>
           <p style={{
-            color: 'rgba(255, 255, 255, 0.9)',
+            color: '#ffffff',
             fontSize: 'var(--font-size-lg)',
             lineHeight: 1.6,
-            marginBottom: 'var(--spacing-lg)'
+            marginBottom: 'var(--spacing-lg)',
+            textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)',
+            opacity: 1
           }}>
             Successfully transformed a struggling fintech app into a robust, scalable platform
             serving 50,000+ users with Clean Architecture, automated CI/CD, and comprehensive testing.
@@ -176,22 +189,23 @@ const ImpactSlide = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 'var(--spacing-sm)',
-                color: 'rgba(255, 255, 255, 0.9)',
+                color: '#ffffff',
                 textDecoration: 'none',
                 padding: 'var(--spacing-sm) var(--spacing-md)',
                 borderRadius: 'var(--radius-md)',
-                background: 'rgba(255, 255, 255, 0.1)',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
+                background: 'rgba(255, 255, 255, 0.15)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
                 transition: 'all var(--transition-normal)',
                 fontSize: 'var(--font-size-sm)',
-                fontWeight: '500'
+                fontWeight: '500',
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+                e.target.style.background = 'rgba(255, 255, 255, 0.25)';
                 e.target.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+                e.target.style.background = 'rgba(255, 255, 255, 0.15)';
                 e.target.style.transform = 'translateY(0)';
               }}
             >
@@ -212,38 +226,50 @@ const ImpactSlide = () => {
             }}
           >
             <span style={{
-              background: 'rgba(255, 255, 255, 0.2)',
+              background: 'rgba(255, 255, 255, 0.25)',
               padding: 'var(--spacing-xs) var(--spacing-sm)',
               borderRadius: 'var(--radius-md)',
               fontSize: 'var(--font-size-sm)',
-              fontWeight: '600'
+              fontWeight: '600',
+              color: 'white',
+              textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+              border: '1px solid rgba(255, 255, 255, 0.3)'
             }}>
               Clean Architecture
             </span>
             <span style={{
-              background: 'rgba(255, 255, 255, 0.2)',
+              background: 'rgba(255, 255, 255, 0.25)',
               padding: 'var(--spacing-xs) var(--spacing-sm)',
               borderRadius: 'var(--radius-md)',
               fontSize: 'var(--font-size-sm)',
-              fontWeight: '600'
+              fontWeight: '600',
+              color: 'white',
+              textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+              border: '1px solid rgba(255, 255, 255, 0.3)'
             }}>
               Automated CI/CD
             </span>
             <span style={{
-              background: 'rgba(255, 255, 255, 0.2)',
+              background: 'rgba(255, 255, 255, 0.25)',
               padding: 'var(--spacing-xs) var(--spacing-sm)',
               borderRadius: 'var(--radius-md)',
               fontSize: 'var(--font-size-sm)',
-              fontWeight: '600'
+              fontWeight: '600',
+              color: 'white',
+              textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+              border: '1px solid rgba(255, 255, 255, 0.3)'
             }}>
               Comprehensive Testing
             </span>
             <span style={{
-              background: 'rgba(255, 255, 255, 0.2)',
+              background: 'rgba(255, 255, 255, 0.25)',
               padding: 'var(--spacing-xs) var(--spacing-sm)',
               borderRadius: 'var(--radius-md)',
               fontSize: 'var(--font-size-sm)',
-              fontWeight: '600'
+              fontWeight: '600',
+              color: 'white',
+              textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+              border: '1px solid rgba(255, 255, 255, 0.3)'
             }}>
               Performance Optimized
             </span>
